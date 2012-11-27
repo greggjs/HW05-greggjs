@@ -19,7 +19,6 @@ MatrixGraph::MatrixGraph(unsigned int num_nodes) {
 }
 
 MatrixGraph::~MatrixGraph() {
-	delete &M;
 }
 
 void MatrixGraph::addEdge(NodeID u, NodeID v, EdgeWeight weight) {
