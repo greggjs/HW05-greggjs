@@ -19,7 +19,7 @@ MatrixGraph::MatrixGraph(unsigned int num_nodes) {
 }
 
 MatrixGraph::~MatrixGraph() {
-	for(int i = 0; i < M.size(); i++){
+	for(int i = 0; i < this->M.size(); i++){
 		(this->M).pop_back();
 	}
 }
@@ -60,7 +60,7 @@ unsigned MatrixGraph::size() const {
 unsigned MatrixGraph::numEdges() const {
 	unsigned total = 0;
 	for (int i = 0; i < (this->M).size(); i++) {
-		for (int j = 0; j < (this->M).at(i).size(); j++) {
+		for (int j = i+1; j < (this->M).at(i).size(); j++) {
 			if ((this->M).at(i).at(j) != 0)
 				total++;
 		}

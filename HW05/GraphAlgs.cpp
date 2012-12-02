@@ -37,12 +37,12 @@ pair<vector<NodeID>, EdgeWeight> TSP (Graph* G) {
 
 	for (int i = 0; i < factorial(n-1); i++) {
 		dist = G->weight(0, curr[0]);
-		for (int j = 0; j < n; j++) {
+		for (int j = 0; j < n-1; j++) {
 			if (dist > best_dist)
 				break;
 			else {
 				if (j == n-2)
-					dist += G->weight(curr.at(0), curr.at(1));
+					dist += G->weight(0, curr.at(j));
 				else 
 					dist += G->weight(curr.at(j+1), curr.at(j));
 			}

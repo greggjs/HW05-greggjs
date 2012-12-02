@@ -126,7 +126,7 @@ int main(int argc, char** argv) {
   //testSingleTSP(SB, 5, true);
   //testSingleTSP(SB, 5, false);
 
-  pair<int,int> p = testSpeedTSP(SB, 60, true);
+  pair<int,int> p = testSpeedTSP(SB, 240, true);
 
   std::string output;
   cin >> output;
