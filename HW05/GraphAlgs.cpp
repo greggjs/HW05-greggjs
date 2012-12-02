@@ -20,9 +20,44 @@ int GraphAlgs::factorial(int n) {
 }
 
 pair<vector<NodeID>, EdgeWeight> TSP (Graph* G) {
-	vector<NodeID> curr_path;
-	EdgeWeight dist;
+	
+	/// Vars needed for TSP
+	vector<NodeID> curr;
+	EdgeWeight dist = 0;
 	vector<NodeID> best_path;
 	EdgeWeight best_dist;
 	list<NWPair> openList;
+	list<NWPair>::iterator it;
+	int n;
+
+	/// 
+	for (int i = 0; i < G->size(); i++)
+		curr.push_back(i);
+	n = G->size();
+
+	for (int i = 0; i < factorial(n); i++) {
+		dist = 0;
+		for (int j = 0; j < n; j++) {
+			if (dist > best_dist)
+				break;
+			else {
+				if (j == n-1)
+					dist += G->weight(curr.at(0), curr.at(1));
+				else 
+					dist += G->weight(curr.at(j+1), curr.at(j));
+			}
+		}
+
+		if (dist < best_dist) {
+			best_path = curr;
+			best_dist = dist;
+		}
+
+		/// Got this idea from my roommate Brian. Great function call to use for
+		/// getting the next permutation.
+		next_permutation(curr.begin(), curr.end());
+	}
+
+	pair<vector<NodeID>, EdgeWeight> res (best_path, best_dist);
+	return res;
 }
