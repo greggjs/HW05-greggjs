@@ -57,7 +57,7 @@ unsigned ListGraph::numEdges() const {
 
 	for (int i = 0; i < edgeList.size(); i++) {
 		for (it = ((edgeList.at(i).begin()); it != (edgeList.at(i)).end); it++) {
-			if ((*iter).first > i)
+			if (((NWPair)(*iter)).first > i)
 				size++;
 		}
 	}
