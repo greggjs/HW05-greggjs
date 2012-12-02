@@ -12,8 +12,8 @@ using namespace std;
 ListGraph::ListGraph(int numNodes) {
 	
 	/// Dr. Brinkman's constructor shown using the resize() function
-	edgeList.resize(numNodes);
-	num_edges = 0;
+	this->edgeList.resize(numNodes);
+	this->num_edges = 0;
 	
 }
 
