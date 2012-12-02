@@ -12,7 +12,7 @@
 
 /// Simple recursive function to calculate factorials based on the 
 /// number of nodes passed in (n)
-int GraphAlgs::factorial(int n) {
+int factorial(int n) {
 	if (n == 1)
 		return 1;
 	else 

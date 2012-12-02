@@ -22,7 +22,7 @@ ListGraph::~ListGraph() {
 		edgeList.pop_back();
 }
 
-void ListGraph::addEdge(NodeID u, NodeID v, Edgeweight weight) {
+void ListGraph::addEdge(NodeID u, NodeID v, EdgeWeight weight) {
 	edgeList.at(u).push_back(NWPair(v, weight));
 	edgeList.at(v).push_back(NWPair(u, weight));
 }
@@ -56,8 +56,8 @@ unsigned ListGraph::numEdges() const {
 	EList::const_iterator it;
 
 	for (int i = 0; i < edgeList.size(); i++) {
-		for (it = ((edgeList.at(i).begin()); it != (edgeList.at(i)).end); it++) {
-			if (((NWPair)(*iter)).first > i)
+		for (it = ((edgeList.at(i)).begin()); it != (edgeList.at(i)).end(); it++) {
+			if (((NWPair)(*it)).first > i)
 				size++;
 		}
 	}
