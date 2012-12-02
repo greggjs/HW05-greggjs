@@ -123,10 +123,13 @@ int main(int argc, char** argv) {
   //// Uncomment the following three lines once your TSP function has been written
   StarbucksMap SB;
 
-  testSingleTSP(SB, 5, true);
-  testSingleTSP(SB, 5, false);
+  //testSingleTSP(SB, 5, true);
+  //testSingleTSP(SB, 5, false);
 
   pair<int,int> p = testSpeedTSP(SB, 60, true);
+
+  std::string output;
+  cin >> output;
 
   return 0;
 }
