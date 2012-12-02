@@ -2,6 +2,8 @@
 #include "Graph.h"
 #include <vector>
 
+using namespace std;
+
 #pragma once
 
 
@@ -21,3 +23,5 @@
  */
 
 std::pair<std::vector<NodeID>, EdgeWeight> TSP(Graph* G);
+
+int factorial(int n);
