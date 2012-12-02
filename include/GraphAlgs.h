@@ -22,6 +22,6 @@ using namespace std;
  *     Every pair of nodes u,v  (u != v) has an edge connecting the of weight > 0.
  */
 
-std::pair<std::vector<NodeID>, EdgeWeight> TSP(Graph* G);
+pair<vector<NodeID>, EdgeWeight> TSP(Graph* G);
 
 int factorial(int n);
